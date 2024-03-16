@@ -1,0 +1,1 @@
+[![Build and Test App](https://github.com/Stavrev0102/01.Student-Registry-App/actions/workflows/node.js.yml/badge.svg)](https://github.com/Stavrev0102/01.Student-Registry-App/actions/workflows/node.js.yml)
