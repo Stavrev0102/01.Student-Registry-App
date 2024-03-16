@@ -27,4 +27,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Security test
-        uses: npm test-npm-security
+        run: npm test-npm-security
