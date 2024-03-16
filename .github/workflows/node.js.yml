@@ -1,5 +1,5 @@
 
-name: Build and Test App
+name: Build Test and Deploy the App
 
 on:
   push:
@@ -36,7 +36,18 @@ jobs:
         node-version: 20
         cache: 'npm'
     - name: Install dependencies   
-      run: npm install
+      run: npm install 
     - name: Test the app
       run: npm test
+    
+  deploy:
+      runs-on: ubuntu-latest
+      needs: test-integration
+      steps:
+        - name: Deploy to production
+          uses: johnbeynon/render-deploy-action@v0.0.8
+          with:
+            service-id: ${{ secrets.SERVICE_ID }}
+            api-key: ${{ secrets.API_KEY }}
+            # wait-for-success: true  
  
