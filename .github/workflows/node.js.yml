@@ -23,3 +23,8 @@ jobs:
       run: npm install
     - name: Test the app
       run: npm test
+  audit: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Security test
+        uses: npm test-npm-security
